@@ -9,11 +9,13 @@
 
 #include "backend/Motors.h"
 #include "backend/TimerControl.h"
+#include "backend/Movement.h"
 
 namespace Hamster {
-	extern float Geschwindigkeit;
+	void begin(float Geschwindigkeit);
 
-	void begin();
+	void vor();
+	void linksUm();
 }
 
 //void vor(unsigned byte n);
