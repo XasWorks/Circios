@@ -2,12 +2,15 @@
 
 void setup() {
   Serial.begin(9600);
-  Hamster::begin();
+  Hamster::begin(1);
+
+  pinMode(13, OUTPUT);
 }
 
 void loop() {
-  delay(5000);
-  Motors::motorA.target += 25 * TICKS_PER_TOOTH;
-  delay(5000);
-  Motors::motorA.target = 0;
+  delay(500);
+  Hamster::vor();
+  delay(500);
+  Hamster::linksUm();
+  Hamster::linksUm();
 }
