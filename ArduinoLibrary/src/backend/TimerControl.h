@@ -6,6 +6,7 @@
 #include <avr/interrupt.h>
 
 #include "Motors.h"
+#include "Movement.h"
 
 namespace TimerControl {
 	void setPWM_A(float pwm);

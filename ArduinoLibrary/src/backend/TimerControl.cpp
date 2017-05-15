@@ -22,10 +22,12 @@ namespace TimerControl {
 	}
 }
 
-uint8_t prescA = 5;
+uint8_t prescA = 1;
 ISR(TIMER1_OVF_vect) {
 	if(--prescA == 0) {
+		sei();
+		Movement::update();
 		Motors::update();
-		prescA = 5;
+		prescA = 1000/UPDATE_FREQUENCY;
 	}
 }
