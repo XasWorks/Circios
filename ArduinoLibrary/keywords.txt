@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Hamster			KEYWORD1
+Motors			KEYWORD1
+TimerControl	KEYWORD1
+Movement			KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+vor				KEYWORD2
+linksUm			KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
