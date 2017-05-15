@@ -62,6 +62,24 @@ namespace Motors {
 			PORTB |= (1<< MOTOR_B_DIR);
 	}
 
+	bool motorAtPosition(motorData m) {
+		int32_t mDiff = m.is - m.target;
+		if(mDiff < 0)
+			mDiff = -mDiff;
+
+		return mDiff < MAX_MOTOR_DEFLECTION;
+
+	}
+
+	bool atPosition() {
+		return ((motorAtPosition(motorA) && motorAtPosition(motorB)));
+	}
+
+	void moveBy(float m, float r) {
+		motorA.target += r - m;
+		motorB.target += r + m;
+	}
+
 	void update() {
 		setPowers();
 	}

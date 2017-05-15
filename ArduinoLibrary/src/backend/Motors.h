@@ -9,6 +9,8 @@
 #define P_FACT 0.05
 #define D_FACT 0.12
 
+#define MAX_MOTOR_DEFLECTION 1.5/P_FACT
+
 namespace Motors {
 	struct motorData {
 	   float    target  = 0;
@@ -20,6 +22,10 @@ namespace Motors {
 
 	void begin();
 	void update();
+
+	bool atPosition();
+
+	void moveBy(float m, float r);
 }
 
 #endif
