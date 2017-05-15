@@ -4,7 +4,7 @@
 
 #include "Motors.h"
 
-namespace MovementControl {
+namespace Movement {
 
 }
 
