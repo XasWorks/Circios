@@ -5,8 +5,13 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+#include "Motors.h"
+
 namespace TimerControl {
-	
+	void setPWM_A(float pwm);
+	void setPWM_B(float pwm);
+
+	void begin();
 }
 
 #endif
