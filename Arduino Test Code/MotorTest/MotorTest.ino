@@ -7,10 +7,11 @@ void setup() {
   pinMode(13, OUTPUT);
 }
 
+uint8_t mPresc = 100;
 void loop() {
+  Hamster::linksUm();
+  Hamster::linksUm();
   delay(500);
   Hamster::vor();
   delay(500);
-  Hamster::linksUm();
-  Hamster::linksUm();
 }
