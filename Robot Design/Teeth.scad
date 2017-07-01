@@ -87,19 +87,21 @@ module trackPlate() {
 
 module motorShaft() {
 	difference() {
-		cylinder(d = 3.4, h = 10);
-		translate([0, 15 + 1.1, 0]) cube([30, 30, 30], true);
+		cylinder(d = 3.33, h = 10);
+		translate([0, 15 + 1.05, 0]) cube([30, 30, 30], true);
 	}
 }
 
 module motorWheel() {
 	difference() {
 		union() {
-			linear_extrude(height = toothThickness - 0.7) offset(r = 0.5) offset(r = -1) toothRing(12);
-			cylinder(d = 7, h = 7.3);
+			linear_extrude(height = toothThickness - 0.7) offset(r = 0.3) offset(r = -1) toothRing(12);
+			cylinder(d = 7, h = 7);
 		}
 		translate([0, 0, -0.1]) motorShaft();
+		
+		cylinder(r1 = 4/2, r2= 1, h = 1);
 	}
 }
 
-trackPlate();
+motorWheel();
