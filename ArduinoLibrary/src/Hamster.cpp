@@ -4,6 +4,11 @@
 #include <Arduino.h>
 
 namespace Hamster {
+	void postBattery() {
+		Serial.print("Batterie: ");
+		Serial.print(analogRead(A0)*5.0/1024); Serial.println("V");
+	}
+
 	void begin(float Geschwindigkeit) {
 		TimerControl::begin();
 		Motors::begin();

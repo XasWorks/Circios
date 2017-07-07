@@ -7,6 +7,7 @@
 
 #include "Motors.h"
 #include "Movement.h"
+#include "Hamster.h"
 
 namespace TimerControl {
 	void setPWM_A(float pwm);

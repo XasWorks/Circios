@@ -12,14 +12,12 @@
 #include "backend/Movement.h"
 
 namespace Hamster {
+	void postBattery();
+
 	void begin(float Geschwindigkeit);
 
 	void vor();
 	void linksUm();
 }
-
-//void vor(unsigned byte n);
-//void linksUm();
-//void rechtsUm();
 
 #endif

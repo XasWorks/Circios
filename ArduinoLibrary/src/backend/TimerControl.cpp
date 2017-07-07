@@ -23,11 +23,18 @@ namespace TimerControl {
 }
 
 uint8_t prescA = 1;
+uint16_t prescB = 1;
 ISR(TIMER1_OVF_vect) {
 	if(--prescA == 0) {
 		sei();
 		Movement::update();
 		Motors::update();
 		prescA = 1000/UPDATE_FREQUENCY;
+	}
+
+	if(--prescB == 0) {
+		sei();
+		Hamster::postBattery();
+		prescB = 10000;
 	}
 }
