@@ -2,13 +2,20 @@
 
 void setup() {
   Serial.begin(9600);
-  Hamster::begin(0.75);
+  Hamster::begin(1);
 
   pinMode(13, OUTPUT);
+
+  LComs::reportBattery();
 }
 
-uint8_t mPresc = 100;
 void loop() {
+  delay(5000);
+  LComs::reportBattery();
+  LComs::print("This is a custom message!");
+}
+
+void loop2() {
   delay(3000);
   Hamster::vor();
   Hamster::linksUm();

@@ -16,7 +16,7 @@
 
 #define UPDATE_FREQUENCY 200
 
-#define TOOTH_PER_WHEEL 12
+#define TOOTH_PER_WHEEL 15
 #define TOOTH_PER_LINE 	25
 #define TOOTH_PER_TURN	18
 

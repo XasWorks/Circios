@@ -10,6 +10,7 @@
 #include "backend/Motors.h"
 #include "backend/TimerControl.h"
 #include "backend/Movement.h"
+#include "backend/LComs.h"
 
 namespace Hamster {
 	void postBattery();
