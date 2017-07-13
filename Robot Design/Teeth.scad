@@ -51,8 +51,8 @@ module tooth() {
 }
 module cutoutTooth() {
 	rotate([90, 0, 0])
-	translate([0, 0, -toothThickness/2 - 0.3])
-	linear_extrude(height = toothThickness + 0.6) singleTooth(1, $negative = false);
+	translate([0, 0, -toothThickness/2 - 0.5])
+	linear_extrude(height = toothThickness + 1) singleTooth(1, $negative = false);
 }
 
 
@@ -77,7 +77,7 @@ module trackPlate() {
 		translate([-50, -50, -2.252])
 		cube([100, 100, 2.252]);
 
-		translate([0, 0, -5]) cylinder(r = turnRadius - 7, h = 10);
+		translate([0, 0, -5]) cylinder(r = turnRadius - 10, h = 10);
 		trackStrip();
 		rotate([0, 0, 90]) trackStrip();
 		turnTeeth();
@@ -87,16 +87,16 @@ module trackPlate() {
 
 module motorShaft() {
 	difference() {
-		cylinder(d = 3.33, h = 10);
-		translate([0, 15 + 1.05, 0]) cube([30, 30, 30], true);
+		cylinder(d = 3.38, h = 10);
+		translate([0, 15 + 1.07, 0]) cube([30, 30, 30], true);
 	}
 }
 
 module motorWheel() {
 	difference() {
 		union() {
-			linear_extrude(height = toothThickness - 0.7) offset(r = 0.3) offset(r = -1) toothRing(12);
-			cylinder(d = 7, h = 7);
+			linear_extrude(height = toothThickness - 0.7) offset(r = -1) offset(r = 0.3) toothRing(15);
+			cylinder(d = 7, h = 6.5);
 		}
 		translate([0, 0, -0.1]) motorShaft();
 		
@@ -104,4 +104,4 @@ module motorWheel() {
 	}
 }
 
-motorWheel();
+trackPlate(); 
