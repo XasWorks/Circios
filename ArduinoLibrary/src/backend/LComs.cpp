@@ -6,10 +6,6 @@ namespace LComs {
 
 	uint16_t triggerValue = DEFAULT_TRIGGER_BRIGHTNESS;
 
-	void setTriggerBrightness(uint16_t b) {
-		triggerValue = b;
-	}
-
 	void SBitH() {
 		delay(SIG_LEN/3);
 		digitalWrite(OUT_PIN, HIGH);
@@ -23,6 +19,7 @@ namespace LComs {
 	}
 
 	bool RBit() {
+		triggerValue = analogRead(IN_PIN) + TRIG_HYSTHERESIS;
 		delay(SIG_LEN/2);
 		bool result = (analogRead(IN_PIN) > triggerValue);
 		delay(SIG_LEN/2);

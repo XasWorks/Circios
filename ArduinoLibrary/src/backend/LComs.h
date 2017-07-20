@@ -8,8 +8,9 @@
 #define OUT_PIN 13
 #define IN_PIN A1
 #define DEFAULT_TRIGGER_BRIGHTNESS 300
+#define TRIG_HYSTHERESIS 15
 
-#define SIG_LEN 30
+#define SIG_LEN 100
 
 namespace LComs {
 	enum OpCode : uint8_t {
@@ -21,7 +22,7 @@ namespace LComs {
 		batterie = 0b111
 	};
 
-	void setTriggerBrightness(uint16_t b);
+	extern uint16_t triggerValue;
 
 	void SBitH();
 	void SBitL();

@@ -6,19 +6,30 @@ void setup() {
   Serial.begin(9600);
   
   pinMode(OUT_PIN, OUTPUT);
-
-  setTriggerBrightness(800);
+  
+  triggerValue = analogRead(IN_PIN) + TRIG_HYSTHERESIS;
 }
 
-void waitForStart() {
-  while(analogRead(IN_PIN) < 800) {}
+uint8_t timeoutTicks = 0;
+bool waitForStart() {
+  timeoutTicks = 0;
+  while(analogRead(IN_PIN) < triggerValue) {
+    timeoutTicks++;
+    if(timeoutTicks == 0) 
+      return false;
+    triggerValue = analogRead(IN_PIN) + TRIG_HYSTHERESIS; 
+    delay(1);
+  }
 
   delay(2 * SIG_LEN/3);
   SBitH();
+  return true;
 }
 
 void loop() {
-  waitForStart();
+  if(!waitForStart())
+    return;
+   
   uint8_t oCode = recBits(3);
 
   if(oCode == OpCode::batterie) {
@@ -32,7 +43,8 @@ void loop() {
       if(c == 0)
         return;
 
-      waitForStart();
+      if(!waitForStart())
+        return;
     }
   }
 }
