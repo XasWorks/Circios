@@ -25,4 +25,20 @@ namespace Hamster {
 		Movement::rotateBy(TICKS_PER_TURN);
 		Movement::flush();
 	}
+
+	bool vornFrei() {
+		Movement::moveBy(TICKS_FOR_MEASURE);
+		Movement::flush();
+
+		delay(100);
+
+		bool hasWall = analogRead(A2) > 500;
+
+		Movement::moveBy(-TICKS_FOR_MEASURE);
+		Movement::flush();
+
+		delay(50);
+
+		return hasWall;
+	}
 }

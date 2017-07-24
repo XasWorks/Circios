@@ -17,6 +17,7 @@ Movement			KEYWORD1
 
 vor				KEYWORD2
 linksUm			KEYWORD2
+vornFrei			KEYWORD2
 
 ######################################
 # Constants (LITERAL1)

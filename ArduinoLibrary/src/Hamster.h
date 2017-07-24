@@ -19,6 +19,8 @@ namespace Hamster {
 
 	void vor();
 	void linksUm();
+
+	bool vornFrei();
 }
 
 #endif
