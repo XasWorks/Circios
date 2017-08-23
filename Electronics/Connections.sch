@@ -122,9 +122,9 @@ Wire Wire Line
 Wire Wire Line
 	5950 2300 6850 2300
 Text GLabel 6850 2300 2    60   Input ~ 0
-MotorAPWM
+MotorLPWM
 Text GLabel 6850 2450 2    60   Input ~ 0
-MotorARichtung
+MotorLRichtung
 Wire Wire Line
 	5950 2400 6750 2400
 Wire Wire Line
@@ -132,17 +132,17 @@ Wire Wire Line
 Wire Wire Line
 	6750 2450 6850 2450
 Text GLabel 4400 5400 0    60   Input ~ 0
-MotorAPWM
+MotorLPWM
 Wire Wire Line
 	4400 5400 4850 5400
 Text GLabel 4400 5250 0    60   Input ~ 0
-MotorARichtung
+MotorLRichtung
 Wire Wire Line
 	4400 5250 5000 5250
 Text GLabel 4400 5550 0    60   Input ~ 0
-MotorBPWM
+MotorRPWM
 Text GLabel 4400 5700 0    60   Input ~ 0
-MotorBRichtung
+MotorRRichtung
 Wire Wire Line
 	4850 5550 4400 5550
 Wire Wire Line
@@ -152,9 +152,9 @@ Wire Wire Line
 Wire Wire Line
 	4400 5700 4850 5700
 Text GLabel 6850 2600 2    60   Input ~ 0
-MotorBPWM
+MotorRPWM
 Text GLabel 6850 2750 2    60   Input ~ 0
-MotorBRichtung
+MotorRRichtung
 Wire Wire Line
 	6850 2600 6750 2600
 Wire Wire Line
@@ -168,9 +168,9 @@ Wire Wire Line
 Wire Wire Line
 	6700 2600 5950 2600
 Text GLabel 4450 4650 0    60   Input ~ 0
-MotorAGrün
+MotorLGelb
 Text GLabel 4450 4800 0    60   Input ~ 0
-MotorBGrün
+MotorRGelb
 Wire Wire Line
 	4450 4650 5000 4650
 Wire Wire Line
@@ -180,7 +180,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 4750 5000 4750
 Text GLabel 4450 4950 0    60   Input ~ 0
-MotorAGelb
+MotorLGrün
 Wire Wire Line
 	4450 4950 4850 4950
 Wire Wire Line
@@ -196,7 +196,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 5650 5000 5650
 Text GLabel 4450 5100 0    60   Input ~ 0
-MotorBGelb
+MotorRGrün
 Wire Wire Line
 	4450 5100 4850 5100
 Wire Wire Line
@@ -204,13 +204,13 @@ Wire Wire Line
 Wire Wire Line
 	4850 5150 5000 5150
 Text GLabel 4500 2350 0    60   Input ~ 0
-MotorARot
+MotorLRot
 Text GLabel 4500 2500 0    60   Input ~ 0
-MotorAWeiß
+MotorLWeiß
 Text GLabel 4500 2650 0    60   Input ~ 0
-MotorBRot
+MotorRRot
 Text GLabel 4500 2800 0    60   Input ~ 0
-MotorBWeiß
+MotorRWeiß
 Wire Wire Line
 	4500 2800 4850 2800
 Wire Wire Line
@@ -270,13 +270,13 @@ Connection ~ 6650 2200
 Wire Wire Line
 	4700 2100 4700 3450
 Text GLabel 6850 3400 2    60   Input ~ 0
-MotorASchwarz
+MotorLSchwarz
 Text GLabel 6850 3550 2    60   Input ~ 0
-MotorABlau
+MotorLBlau
 Text GLabel 6850 3750 2    60   Input ~ 0
-MotorBSchwarz
+MotorRSchwarz
 Text GLabel 6850 3900 2    60   Input ~ 0
-MotorBBlau
+MotorRBlau
 Wire Wire Line
 	6850 3400 6650 3400
 Connection ~ 6650 3400
